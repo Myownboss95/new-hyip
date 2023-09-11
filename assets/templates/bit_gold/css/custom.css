@@ -1,0 +1,329 @@
+/* Copy Animation */
+
+.copyInput {
+	display: inline-block;
+	line-height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+  }
+  
+  .copied::after {
+	position: absolute;
+	top: 8px;
+	right: 12%;
+	width: 100px;
+	display: block;
+	content: "COPIED";
+	font-size: 1em;
+	padding: 5px 5px;
+	color: #fff;
+	background-color: hsl(var(--base));
+	border-radius: 3px;
+	opacity: 0;
+	will-change: opacity, transform;
+	animation: showcopied 1.5s ease;
+  }
+  
+  @keyframes showcopied {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	50% {
+		opacity: 0.7;
+		transform: translateX(40%);
+	}
+	70% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+	}
+  }
+
+.input-group-text.copytext.copyBoard {
+    cursor: pointer;
+}
+
+
+
+
+.cookies-card {
+  width: 520px;
+  padding: 30px;
+  color: #dddddd;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  z-index: 999999;
+  transition: all .5s;
+  background: #222222;
+  border-radius: 5px;
+  border: 2px solid hsl(var(--base)/ 0.5);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--second_color);
+  box-shadow: 0 0 15px hsl(var(--base)/ 0.5);
+}
+  
+  .cookies-card.hide{
+	bottom: -500px !important;
+  }
+  .radius--10px {
+	border-radius: 10px;
+  }
+  
+  .cookies-card__icon {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background-color: #6e6f70;
+    color: #fff;
+	font-size: 32px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .cookies-card__content {
+	margin-bottom: 0;
+  }
+  
+  .cookies-btn {
+	color: #363636;
+	text-decoration: none;
+	padding: 10px 35px;
+	margin: 3px 5px;
+	display: inline-block;
+	border-radius:  999px;
+  }
+  
+  .cookies-btn:hover {
+	color: #363636;
+  }
+
+  
+  @media (max-width: 767px) {
+	  .cookies-card {
+		  width:  100%;
+		  left: 0;
+		  bottom:  0;
+		  font-size:  14px;
+		  padding:  15px;
+	  }
+  }
+
+
+
+
+.hover-input-popup {
+        position: relative;
+    }
+    .input-popup {
+        display: none;
+    }
+    .hover-input-popup .input-popup {
+        display: block;
+        position: absolute;
+        bottom: 70%;
+        left: 50%;
+        width: 280px;
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .input-popup::after {
+        position: absolute;
+        content: '';
+        bottom: -19px;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 10px 10px 10px 10px;
+        border-style: solid;
+        border-color: transparent transparent #1a1a1a transparent;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .input-popup p {
+        padding-left: 20px;
+        position: relative;
+    }
+    .input-popup p::before {
+        position: absolute;
+        content: '';
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+        left: 0;
+        top: 4px;
+        line-height: 1;
+        font-size: 18px;
+    }
+    .input-popup p.error {
+        text-decoration: line-through;
+    }
+    .input-popup p.error::before {
+        content: "\f057";
+        color: #ea5455;
+    }
+    .input-popup p.success::before {
+        content: "\f058";
+        color: #28c76f;
+    }
+
+
+
+ .show-filter{
+  display: none;
+}
+@media(max-width:767px){
+  .responsive-filter-card{
+      display: none;
+      transition: none;
+  }
+  .show-filter{
+      display: block;
+  }
+}
+
+.modal-content{
+  background-color: #242431;
+  border: 1px solid rgba(0,0,0,.2);
+}
+.modal-content .close{
+  background: transparent;
+  color: #fff;
+}
+
+.modal-header{
+  border-bottom: 1px solid #373742;
+}
+.modal-footer{
+  border-top: 1px solid #373742;
+}
+
+
+.table-search {
+	width: 33%;
+	margin-left: auto;
+}
+@media (max-width:991px) {
+	.table-search {
+		width: 50%;
+	}
+}
+@media (max-width:575px) {
+	.table-search {
+		width: 100%;
+	}
+}
+
+.verification-code-wrapper{
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+  background-color: #000 !important;
+}
+.verification-code::after {
+  background-color: #000 !important;
+}
+.verification-code input:focus {
+  background-color: inherit !important;
+}
+.border-bottom {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+label.required:after{
+  content: '*';
+  color: #DC3545!important;
+  margin-left: 2px;
+}
+
+
+/* =========================== Custom Checkbox Design Start =========================== */
+.form--check .form-check-input {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  box-shadow: none !important;
+  border: 0;
+  position: relative;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid hsl(var(--base));
+  margin-right: 5px;
+  }
+
+  .form--check .form-check-input:checked {
+  background-color: hsl(var(--base)) !important;
+  border-color: hsl(var(--base)) !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  }
+
+  .form--check .form-check-input:checked[type=checkbox] {
+  background-image: none;
+  }
+
+  .form--check .form-check-input:checked::before {
+  position: absolute;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  }
+/* =========================== Custom Checkbox Design End =========================== */
+.verification-code span {
+  background: #22222e;
+  border: solid 1px #f1f1f11f;
+  color: #ffffff;
+}
+.verification-code input {
+  color: #ffff !important;
+}
+
+.disabled{
+  opacity: 0.7;
+}
+
+.input-group-text{
+  background-color: hsl(var(--base)) !important;
+}
+
+.file-upload .remove-btn{
+  background: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.metamask-image{
+  width: 22px;
+}
+

@@ -1,0 +1,24 @@
+{
+    "name": "laramin/utility",
+    "description": "Utility services for application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "laramin"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Laramin\\Utility\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laramin\\Utility\\UtilityServiceProvider"
+            ]
+        }
+    }
+}
